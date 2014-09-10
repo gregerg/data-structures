@@ -7,12 +7,12 @@ var makeQueue = function(){
   // Implement the methods below
 
   someInstance.enqueue = function(value){
-    var size = this.size();
+    var size = someInstance.size();
     storage[size] = value;
   };
 
   someInstance.dequeue = function(){
-    var size = this.size();
+    var size = someInstance.size();
     var output = storage[0];
     for(var i = 0; i < size; i++) {
       storage[i] = storage[i+1];

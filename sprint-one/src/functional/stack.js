@@ -6,12 +6,12 @@ var makeStack = function(){
 
   // Implement the methods below
   someInstance.push = function(value){
-    var size = this.size();
+    var size = someInstance.size();
     storage[size] = value;
   };
 
   someInstance.pop = function(){
-    var size = this.size();
+    var size = someInstance.size();
     if (size === 0) {
       return;
     }
