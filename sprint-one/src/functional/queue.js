@@ -8,7 +8,7 @@ var makeQueue = function(){
 
   someInstance.enqueue = function(value){
     var size = this.size();
-    storage[size+1] = value;
+    storage[size] = value;
   };
 
   someInstance.dequeue = function(){
@@ -17,14 +17,14 @@ var makeQueue = function(){
     for(var i = 0; i < size; i++) {
       storage[i] = storage[i+1];
     }
+    delete storage[size-1];
     return output;
   };
 
   someInstance.size = function(){
     var i = 0;
-    while(storage[i] !== undefined);
+    while(storage[i] !== undefined)
       i++;
-    }
     return i;
   };
 
